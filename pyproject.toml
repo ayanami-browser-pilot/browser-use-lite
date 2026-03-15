@@ -6,6 +6,8 @@ build-backend = "hatchling.build"
 name = "browser-use-lite"
 version = "1.0.0"
 description = "Minimal cloud browser SDK for browser-use — session lifecycle management via CDP."
+readme = "README.md"
+license = "MIT"
 requires-python = ">=3.10"
 dependencies = [
     "httpx>=0.27.0",
