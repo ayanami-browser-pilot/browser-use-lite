@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "browser-use-lite"
+version = "1.0.0"
+description = "Minimal cloud browser SDK for browser-use — session lifecycle management via CDP."
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.27.0",
+    "pydantic>=2.5.2,<3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24",
+    "pytest-cov>=5.0",
+    "respx>=0.21",
+]
+
+[project.urls]
+Homepage = "https://github.com/ayanami-browser-pilot/browser-use-lite"
+Repository = "https://github.com/ayanami-browser-pilot/browser-use-lite"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/browser_use_lite"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
